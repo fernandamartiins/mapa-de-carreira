@@ -1,0 +1,410 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --primary: #771398;
+  --accent: #b998ed;
+  --muted: #6b7280;
+  --glass: rgba(91,79,176,0.06);
+  --radius: 14px;
+  --maxw: 1100px;
+  --shadow: 0 8px 28px rgba(24,23,48,0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #ffffff 60%);
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+}
+
+.profile-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  padding: 26px 20px;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+/* FOTO */
+.photo {
+  height: 200px;
+  width: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.08);
+  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  flex-shrink: 0;
+}
+
+/* (nome, sub, email) */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1; 
+  min-width: 180px; 
+}
+
+.header-left .name {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+}
+
+ .sub {
+  font-size: 22px;
+  margin: 6px 0;
+  opacity: 0.95;
+  color: #dcdbdb;
+}
+
+/* EMAIL */
+.header-contatos-left {
+  margin-top: 12px;
+}
+
+.header-contatos-left a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e8e7e7;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.header-contatos-left a i{
+  font-size: 22px;
+  width: 28px;
+  text-align: center;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 160px; 
+}
+
+.header-right a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e8e7e7;
+  font-size: 16px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.header-right a i {
+  font-size: 25px;
+  width: 30px;
+  text-align: center;
+}
+
+.header-right a:hover {
+  color: #f2c3ff;
+}
+
+.fa-brands, .fa-solid {
+    color: #fff;
+}
+
+/* MAIN */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 30px;
+  padding: 36px;
+}
+
+.about {
+  background: var(--glass);
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.about p {
+  margin: 0;
+  line-height: 1.6;
+  color: #2b2b2b;
+}
+
+h2 {
+    color: #771398;
+}
+
+.section-title {
+  font-size: 25px;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.timeline {
+  border-left: 3px solid rgba(91,79,176,0.12);
+  padding-left: 26px;
+}
+
+.step {
+  position: relative;
+  padding: 18px 18px 18px 30px;
+  margin-bottom: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.0));
+  border-radius: 10px;
+}
+
+.step:before {
+  content: '';
+  position: absolute;
+  left: -39px;
+  top: 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 4px solid var(--primary);
+  box-shadow: 0 4px 14px rgba(88,68,170,0.12);
+}
+
+.step h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.step .meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.step p {
+  margin: 0 0 12px 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.badge {
+  background: #f3f4ff;
+  color: var(--primary);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+  box-shadow: inset 0 -2px 0 rgba(91,79,176,0.03);
+}
+
+.subheading {
+  font-weight: 700;
+  margin-top: 8px;
+  color: #2b2b2b;
+}
+
+ul.clean {
+  margin: 8px 0 0 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* SIDEBAR */
+.card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(24,23,48,0.04);
+}
+
+.skill {
+  margin-bottom: 12px;
+}
+
+.skill .label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.bar {
+  height: 10px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar > i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.download {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  /* HEADER */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .photo {
+    height: 150px;
+    width: 150px;
+  }
+
+  .header-center {
+    order: 2;
+  }
+
+  .header-right {
+    order: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  /* MAIN */
+  .main {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .content-left {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    border-left: 3px solid rgba(91,79,176,0.08);
+    padding-left: 16px;
+  }
+
+  .step {
+    padding-left: 24px;
+  }
+
+  .step:before {
+    left: -27px;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* BADGES */
+  .badges {
+    gap: 6px;
+  }
+
+  /* FONTE */
+  h2 {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .photo {
+    height: 120px;
+    width: 120px;
+  }
+
+  .header-right a {
+    font-size: 14px;
+  }
+
+  .skill .label {
+    font-size: 12px;
+  }
+
+  .bar {
+    height: 8px;
+  }
+
+  .download {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .step h3 {
+    font-size: 16px;
+  }
+
+  .step p {
+    font-size: 13px;
+  }
+}
